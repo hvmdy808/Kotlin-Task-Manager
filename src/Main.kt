@@ -1,4 +1,16 @@
 
+fun printDone(list:List<Task>){
+    for (task in list){
+        if(task.isDone){ println("${task.title} -- ✅")}
+    }
+}
+
+fun printNotDone(list:List<Task>){
+    for (task in list){
+        if(!task.isDone){ println("${task.title} -- ❌") }
+    }
+}
+
 fun printAll(list:MutableList<Task>){
     for (task in list){
         println("${task.title} -- ${ if (task.isDone) "✅" else "❌"}")
